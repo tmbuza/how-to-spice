@@ -1,2 +1,1 @@
-# how-to-spice
-Splice site analysis
+# Splice Junction Analysis
