@@ -31,4 +31,3 @@ jobs:
           ls
           python --version
           conda env list
-          mamba env list
