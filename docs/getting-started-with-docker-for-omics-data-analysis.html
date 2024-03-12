@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>1 Getting Started with Docker for Omics Data Analysis | Docker Images: The Solution for High-Dimensional Biological Datasets</title>
+<meta name="author" content="Teresia Mrema-Buza">
+<meta name="description" content="Docker has revolutionized the way omics data analysis workflows are developed, shared, and deployed. Omics data, which includes genomics, proteomics, metabolomics, and other high-dimensional...">
+<meta name="generator" content="bookdown 0.37 with bs4_book()">
+<meta property="og:title" content="1 Getting Started with Docker for Omics Data Analysis | Docker Images: The Solution for High-Dimensional Biological Datasets">
+<meta property="og:type" content="book">
+<meta property="og:url" content="https://tmbuza.github.io/splice-junction/getting-started-with-docker-for-omics-data-analysis.html">
+<meta property="og:image" content="https://tmbuza.github.io/splice-junction/images/planning.png">
+<meta property="og:description" content="Docker has revolutionized the way omics data analysis workflows are developed, shared, and deployed. Omics data, which includes genomics, proteomics, metabolomics, and other high-dimensional...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1 Getting Started with Docker for Omics Data Analysis | Docker Images: The Solution for High-Dimensional Biological Datasets">
+<meta name="twitter:description" content="Docker has revolutionized the way omics data analysis workflows are developed, shared, and deployed. Omics data, which includes genomics, proteomics, metabolomics, and other high-dimensional...">
+<meta name="twitter:image" content="https://tmbuza.github.io/splice-junction/images/planning.png">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/Sen-0.4.8/font.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM%20Mono&amp;display=swap" rel="stylesheet">
+<link href="libs/Bitter-0.4.8/font.css" rel="stylesheet">
+<script src="libs/bs3compat-0.6.1/transition.js"></script><script src="libs/bs3compat-0.6.1/tabs.js"></script><script src="libs/bs3compat-0.6.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Practical User Guides For Reproducible Research"><big>Docker Images:</big> The Solution for High-Dimensional Biological Datasets</a>:
+        <small class="text-muted">Practical User Guides For Reproducible Research</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Using Docker for Splice Junction Analysis</a></li>
+<li class="book-part">DOCKER FOR OMICS</li>
+<li><a class="active" href="getting-started-with-docker-for-omics-data-analysis.html"><span class="header-section-number">1</span> Getting Started with Docker for Omics Data Analysis</a></li>
+<li><a class="" href="creating-a-docker-account.html"><span class="header-section-number">2</span> Creating a Docker Account</a></li>
+<li><a class="" href="using-a-docker-image-from-docker-hub.html"><span class="header-section-number">3</span> Using a Docker Image from Docker Hub</a></li>
+<li><a class="" href="use-case-junction-analysis-using-portcullis-docker-image.html"><span class="header-section-number">4</span> Use Case: Junction Analysis Using Portcullis Docker Image</a></li>
+<li><a class="" href="step-4-junctions-annotation.html"><span class="header-section-number">5</span> Step 4: Junctions Annotation</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/tmbuza/splice-juction.git">View book source <i class="fas fa-air-freshener"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="getting-started-with-docker-for-omics-data-analysis" class="section level1" number="1">
+<h1>
+<span class="header-section-number">1</span> Getting Started with Docker for Omics Data Analysis<a class="anchor" aria-label="anchor" href="#getting-started-with-docker-for-omics-data-analysis"><i class="fas fa-link"></i></a>
+</h1>
+<p>Docker has revolutionized the way omics data analysis workflows are developed, shared, and deployed. Omics data, which includes genomics, proteomics, metabolomics, and other high-dimensional biological datasets, often requires complex software environments and dependencies. Docker provides a solution by encapsulating these environments into portable and reproducible containers.</p>
+<p>In this guide, we’ll explore how Docker can enhance omics data analysis workflows:</p>
+<div id="creating-reproducible-environments" class="section level2" number="1.1">
+<h2>
+<span class="header-section-number">1.1</span> Creating Reproducible Environments<a class="anchor" aria-label="anchor" href="#creating-reproducible-environments"><i class="fas fa-link"></i></a>
+</h2>
+<p>Docker allows researchers to package their entire analysis pipeline, including software tools, libraries, and dependencies, into a single container. This ensures reproducibility across different computing environments, making it easier to share and reproduce analyses.</p>
+</div>
+<div id="simplified-installation" class="section level2" number="1.2">
+<h2>
+<span class="header-section-number">1.2</span> Simplified Installation<a class="anchor" aria-label="anchor" href="#simplified-installation"><i class="fas fa-link"></i></a>
+</h2>
+<p>Setting up bioinformatics software tools and libraries can be challenging due to compatibility issues and dependency conflicts. With Docker, users can simply pull pre-built Docker images containing all the necessary software, eliminating the need for manual installations.</p>
+</div>
+<div id="scalability-and-efficiency" class="section level2" number="1.3">
+<h2>
+<span class="header-section-number">1.3</span> Scalability and Efficiency<a class="anchor" aria-label="anchor" href="#scalability-and-efficiency"><i class="fas fa-link"></i></a>
+</h2>
+<p>Docker containers are lightweight and can be spun up or down quickly, making them ideal for parallelizing omics analyses across multiple computing nodes or cloud instances. This scalability improves efficiency and reduces analysis time for large datasets.</p>
+</div>
+<div id="version-control-and-collaboration" class="section level2" number="1.4">
+<h2>
+<span class="header-section-number">1.4</span> Version Control and Collaboration<a class="anchor" aria-label="anchor" href="#version-control-and-collaboration"><i class="fas fa-link"></i></a>
+</h2>
+<p>Docker images can be version-controlled using tools like Docker Hub or Git, allowing researchers to track changes and collaborate on analysis pipelines. This facilitates reproducible research and enables seamless sharing of analysis workflows with the scientific community.</p>
+</div>
+<div id="integration-with-workflow-managers" class="section level2" number="1.5">
+<h2>
+<span class="header-section-number">1.5</span> Integration with Workflow Managers<a class="anchor" aria-label="anchor" href="#integration-with-workflow-managers"><i class="fas fa-link"></i></a>
+</h2>
+<p>Docker integrates seamlessly with workflow management systems like Nextflow, Snakemake, or Common Workflow Language (CWL). Researchers can define complex analysis pipelines using these workflow managers and execute them within Docker containers, ensuring consistency and reproducibility.</p>
+<p>By leveraging Docker for omics data analysis, researchers can streamline their workflows, improve reproducibility, and accelerate scientific discoveries in the field of bioinformatics. In the following sections, we’ll dive deeper into the practical aspects of using Docker for various omics data analysis tasks, from preprocessing raw data to downstream statistical analysis and visualization. Let’s embark on a journey to harness the power of Docker for advancing omics research!</p>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="index.html">Using Docker for Splice Junction Analysis</a></div>
+<div class="next"><a href="creating-a-docker-account.html"><span class="header-section-number">2</span> Creating a Docker Account</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#getting-started-with-docker-for-omics-data-analysis"><span class="header-section-number">1</span> Getting Started with Docker for Omics Data Analysis</a></li>
+<li><a class="nav-link" href="#creating-reproducible-environments"><span class="header-section-number">1.1</span> Creating Reproducible Environments</a></li>
+<li><a class="nav-link" href="#simplified-installation"><span class="header-section-number">1.2</span> Simplified Installation</a></li>
+<li><a class="nav-link" href="#scalability-and-efficiency"><span class="header-section-number">1.3</span> Scalability and Efficiency</a></li>
+<li><a class="nav-link" href="#version-control-and-collaboration"><span class="header-section-number">1.4</span> Version Control and Collaboration</a></li>
+<li><a class="nav-link" href="#integration-with-workflow-managers"><span class="header-section-number">1.5</span> Integration with Workflow Managers</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/tmbuza/splice-juction.git/blob/gh-pages/index.Rmd">View source <i class="fas fa-air-freshener"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/tmbuza/splice-juction.git/edit/gh-pages/index.Rmd">Edit this page <i class="fas fa-air-freshener"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 mt-3">
+        <p><strong><u><a class="text-light" href="https://microbiome.complexdatainsights.com"><big>Docker Images:</big> The Solution for High-Dimensional Biological Datasets</a></u></strong>: Practical User Guides For Reproducible Research</p>
+<br><p>Authored by Teresia Mrema-Buza, Last updated: <b>2024-03-13</b>.</p>
+<br>
+</div>
+      <div class="col-12 col-md-6 mt-3">
+        <p>Note: This practical guide was created using the <a class="text-light" href="https://bookdown.org/yihui/bookdown/">bookdown</a> R package, styled with the modern bs4_book format.</p>
+      </div>
+
+    </div>
+  </div>
+</footer>
+</body>
+</html>
