@@ -69,6 +69,7 @@ By following these steps, you'll have successfully created a Docker account and 
 ## Step 1: Pull or build image from a `Dockerfile`
 ```bash
 docker pull maplesond/portcullis:latest
+docker pull 17602532556/annotation:latest
 ```
 
 ## Step 2: Run and mount a volume
